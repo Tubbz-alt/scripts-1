@@ -1,0 +1,1 @@
+#Built for python 2.7import urllibimport httplibi=100while i<40000:	projectExists=urllib.urlopen("https://api.scratch.mit.edu/projects/"+str(i))	if(projectExists.read()!='{"code":"NotFound","message":""}'):		print(urllib.urlretrieve("https://projects.scratch.mit.edu/internalapi/project/"+str(i)+"/get/","projects/"+str(i)+".sb"))	i+=1	print(i)
